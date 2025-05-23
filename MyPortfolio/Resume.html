@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Ahmed Samy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e40af, #059669, #d97706);
+            color: #ffffff;
+        }
+        .resume-section {
+            min-height: 100vh;
+            padding: 8rem 2rem;
+            max-width: 7xl;
+            margin: auto;
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #f59e0b;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-90 shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold">Ahmed Samy</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">About</a>
+                    <a href="skills.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Skills</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Projects</a>
+                    <a href="networking.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Networking</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Contact</a>
+                    <a href="resume.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Resume</a>
+                    <a href="demo.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Interactive Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="animate-resume text-center">
+            <h1 class="text-4xl font-bold mb-8">Resume</h1>
+            <div class="max-w-3xl mx-auto space-y-8 text-left">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Education</h2>
+                    <p class="text-lg">B.Sc. in Computer Science, Future University in Egypt (Expected 2026)</p>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>Flutter & Dart</li>
+                        <li>.NET</li>
+                        <li>Image Processing</li>
+                        <li>React Native & Node.js</li>
+                        <li>Java</li>
+                        <li>UI/UX Design (Figma, Adobe XD)</li>
+                        <li>Networking (VLANs, Routing)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+                    <p class="text-lg font-medium">Software Development Intern, NTI, Egypt (Summer 2024)</p>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>Developed features for web and mobile applications using Flutter and .NET.</li>
+                        <li>Collaborated with teams to enhance UI déréglementation user interfaces.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>HydrateMe: A Flutter app for tracking water intake.</li>
+                        <li>Bouncing Ball Game: An interactive canvas-based game.</li>
+                        <li>Networking Configuration: Designed VLANs and static routes.</li>
+                        <li>UI/UX Portfolio: Created designs using Figma and Adobe XD.</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Download Resume (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // GSAP Animations
+        gsap.from(".animate-resume", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out"
+        });
+        gsap.from(".nav-link", {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.1,
+            delay: 0.5
+        });
+    </script>
+</body>
+</html>

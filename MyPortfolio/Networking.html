@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking | Ahmed Samy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e40af, #059669, #d97706);
+            color: #ffffff;
+        }
+        .networking-section {
+            min-height: 100vh;
+            padding: 8rem 2rem;
+            max-width: 7xl;
+            margin: auto;
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #f59e0b;
+            transform: translateY(-2px);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #1f2937;
+        }
+        th, td {
+            border: 1px solid #4b5563;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background: #374151;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-90 shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold">Ahmed Samy</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">About</a>
+                    <a href="skills.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Skills</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Projects</a>
+                    <a href="networking.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Networking</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Contact</a>
+                    <a href="resume.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Resume</a>
+                    <a href="demo.html" class="nav-link text-white hover:text-yellow-400 px-3 py-2">Interactive Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Networking Section -->
+    <section class="networking-section">
+        <div class="animate-networking text-center">
+            <h1 class="text-4xl font-bold mb-8">Networking Projects</h1>
+            <p class="text-lg mb-6 max-w-2xl mx-auto">Designed and configured VLANs and static routes for efficient network communication, as part of my networking coursework.</p>
+            
+            <h2 class="text-2xl font-semibold mb-4">VLAN Configuration</h2>
+            <table class="max-w-4xl mx-auto mb-8">
+                <tr>
+                    <th>VLAN</th>
+                    <th>Network</th>
+                    <th>PCs</th>
+                    <th>IP Addresses</th>
+                </tr>
+                <tr>
+                    <td>VLAN 1</td>
+                    <td>192.168.1.0/24</td>
+                    <td>PC4, PC5</td>
+                    <td>PC4: 192.168.1.4/24<br>PC5: 192.168.1.5/24</td>
+                </tr>
+                <tr>
+                    <td>VLAN 10</td>
+                    <td>192.168.10.0/25</td>
+                    <td>PC2, PC3, PC6, PC8</td>
+                    <td>PC2: 192.168.10.2/25<br>PC3: 192.168.10.3/25<br>PC6: 192.168.10.4/25<br>PC8: 192.168.10.5/25</td>
+                </tr>
+                <tr>
+                    <td>VLAN 20</td>
+                    <td>192.168.20.0/24</td>
+                    <td>PC1, PC7</td>
+                    <td>PC1: 192.168.20.2/24<br>PC7: 192.168.20.3/24</td>
+                </tr>
+            </table>
+
+            <h2 class="text-2xl font-semibold mb-4">Routing Tables</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Router R1</h3>
+                    <table>
+                        <tr><th>Network</th><th>Status</th></tr>
+                        <tr><td>192.168.10.0/24</td><td>Directly connected</td></tr>
+                        <tr><td>10.1.1.0/30</td><td>Directly connected</td></tr>
+                        <tr><td>10.1.1.8/30</td><td>Directly connected</td></tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mbtion, and networking projects. Let’s connect!</p>
+        </div>
+    </section>
+
+    <script>
+        // GSAP Animations
+        gsap.from(".animate-contact", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out"
+        });
+        gsap.from(".nav-link", {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.1,
+            delay: 0.5
+        });
+        gsap.from(".social-link", {
+            opacity: 0,
+            x: 30,
+            duration: 0.8,
+            stagger: 0.2,
+            delay: 0.7
+        });
+    </script>
+</body>
+</html>
